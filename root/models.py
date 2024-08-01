@@ -27,16 +27,6 @@ class Services(models.Model):
     class Meta:
         ordering = ('created_at',)
         
-class Category(models.Model):
-    name = models.CharField(max_length=100)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    def __str__(self):
-        return self.name
-    
-    class Meta:
-        ordering = ('created_at',)
-        
 class Attribute(models.Model):
     name = models.CharField(max_length=100)
     statue = models.BooleanField(default=False)
@@ -51,7 +41,6 @@ class Attribute(models.Model):
 
 class Price(models.Model):
     name = models.CharField(max_length=100)
-    category = models.ManyToManyField(Category)
     fee = models.FloatField(default=100)
     attribute = models.ManyToManyField(Attribute)
     statue = models.BooleanField(default=False)
