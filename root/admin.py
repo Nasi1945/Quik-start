@@ -8,4 +8,5 @@ admin.site.register(Attribute)
 admin.site.register(Category)
 admin.site.register(Trainers)
 admin.site.register(Skills)
+admin.site.register(Questions)
 # Register your models here.

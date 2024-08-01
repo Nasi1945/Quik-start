@@ -84,10 +84,3 @@ Ref: "price"."category" < "category"."id"
 Ref: "trainers"."user" < "user"."id"
 
 Ref: "trainers"."skills" < "skills"."id"
-
-<li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Voluptate id voluptas qui sed aperiam rerum</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Iure nihil dolores recusandae odit voluptatibus</span></li>

@@ -3,31 +3,16 @@ from .models import Special,Services,Trainers,Price,Questions
 
 
 def home(requests):
-    Specials = Special.objects.filter(statue = True)
-    context = {
-        'specials':Specials
-    }
-    return render(requests,'root/index.html',context=context)
-
-def about(requests):
-    return render(requests,'root/index.html')
-
-def features(requests):
-    return render(requests,'root/index.html')
-
-def services(requests):
     service = Services.objects.filter(statue = True)
+    specials = Special.objects.filter(statue=True)
+    questionss = Questions.objects.filter(statue = True)
+    prices = Price.objects.filter(statue=True)
+    trainer = Trainers.objects.filter(status=True)
     context = {
-        'service':service
+        'trainer': trainer,
+        'prices' :prices,
+        'service' : service ,
+        'specials' : specials,
+        'questionss':questionss,
     }
-    return render(requests,'root/index.html',context=context)
-
-def pricing(requests):
-    prices = Price.objects.filter(statue = True)
-    context = {
-        'prices':prices
-    }
-    return render(requests,'root/index.html',context=context)
-
-def contact(requests):
-    return render(requests,'root/index.html')
+    return render(requests,'root/index.html', context=context)
